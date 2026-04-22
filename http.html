@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTTP Client</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Barre de requête -->
+  <div class="request-bar">
+    <select id="method">
+      <option>GET</option>
+      <option>POST</option>
+      <option>PUT</option>
+      <option>DELETE</option>
+      <option>PATCH</option>
+      <option>HEAD</option>
+      <option>OPTIONS</option>
+    </select>
+
+    <input type="text" id="url" placeholder="URL" />
+
+    <button id="sendBtn" onclick="sendRequest()">Envoyer</button>
+  </div>
+
+  <!-- Headers -->
+  <div class="headers-row">
+    <div id="headersList" class="headers-list"></div>
+    <button class="add-btn" onclick="addHeader()">+</button>
+  </div>
+
+  <!-- Body -->
+  <textarea id="body" placeholder="Body"></textarea>
+
+  <hr>
+
+  <!-- Réponse -->
+  <div class="response-meta" id="responseMeta"></div>
+  <textarea id="responseBody" placeholder="Response body" readonly></textarea>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
